@@ -20,6 +20,7 @@ var character = "!@#$%^&*-+?.";
 function generatePassword () {
 var possiblePassword = "" 
 
+var newPassword=[]
 var promptPassword = window.prompt("How many characters would you like the password to be?");
 if (promptPassword < 8 || promptPassword > 128) {
   alert("Password length must be between 8 and 128 characters")
@@ -50,10 +51,23 @@ if (useSymbol) {
 console.log(possiblePassword)
 }
 
+possiblePassword=possiblePassword.split("")
+console.log(possiblePassword)
 
-
+for(var i=0; i<promptPassword;i++){
+var stagedCharacter= shuffleArray(possiblePassword)
+newPassword.push(stagedCharacter)
+}
+console.log(newPassword)
+return newPassword.join("")
 }
 //validate
+function shuffleArray(array){
+  var getindex = Math.floor(Math.random()*array.length)
+  var indexvalue =array[getindex]
+  //possibleArray[2] = c
+  return indexvalue
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
