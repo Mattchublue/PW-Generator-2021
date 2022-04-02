@@ -3,6 +3,8 @@ var generateBtn = document.querySelector("#generate");
 
 // At least 8 characters less than 128.
 
+//comment
+
 //lowercase"(
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 
