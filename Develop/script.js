@@ -30,10 +30,27 @@ if (useLowercase) {
 console.log(possiblePassword)
 }
 
+var useUppercase = confirm("Do you want to use upper case characers")
+if (useUppercase) {
+  possiblePassword += upperCase
+console.log(possiblePassword)
+}
+
+var useNumeric = confirm("Do you want to use numbers?")
+if (useNumeric) {
+  possiblePassword += numbers
+console.log(possiblePassword)
+}
+
+var useSymbol = confirm("Do you want to use special characters?")
+if (useSymbol) {
+  possiblePassword += character
+console.log(possiblePassword)
+}
 
 
 
-
+}
 //validate
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -49,4 +66,3 @@ function writePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
